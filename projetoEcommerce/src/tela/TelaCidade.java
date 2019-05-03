@@ -26,8 +26,6 @@ public class TelaCidade {
 		DAOEstado daoestado = new DAOEstado();
 		Estado estado = new Estado();
 		
-//		listarCadastros listaEst = new listarCadastros();
-		
 		String r = "s";
 		int op = 0;
 		do {
@@ -49,7 +47,6 @@ public class TelaCidade {
 				cidade.setEstado(estado);
 				daocidade.inserir(cidade);
 				principal.main(null);
-				//colocar para retornar para principal no final de cada um
 			}if (op ==2) {
 				listarCadastrosCidade();
 				System.out.println("EXCLUIR CADASTRO");
@@ -97,7 +94,7 @@ public class TelaCidade {
 		
 		System.out.println("-----------------------------------------");
 		System.out.println("LISTAR TODAS CIDADES");
-		List<Cidade> cid = daocidade.buscar(); //estudar melhor o percorrer da lista
+		List<Cidade> cid = daocidade.buscar();
 		
 		for(Cidade cidade : cid) {
 			System.out.println("Id: "+cidade.getId()+" Cidade: "+cidade.getNome()+" Estado: "+cidade.getEstado());
@@ -112,7 +109,6 @@ public class TelaCidade {
 			System.out.println("Id: "+est.getId()+" Estado: "+est.getNome()+" - "+est.getSigla());
 		}
 	}
-	
-	//Só para fazer a listar todos os cadastros em operações
+
 
 }
