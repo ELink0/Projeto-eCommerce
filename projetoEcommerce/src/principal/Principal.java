@@ -6,13 +6,6 @@ import tela.TelaEstado;
 import tela.TelaCidade;
 import tela.TelaCliente;
 
-//import javax.persistence.EntityManager;
-//import javax.persistence.EntityManagerFactory;
-//import javax.persistence.EntityTransaction;
-//import javax.persistence.Persistence;
-//
-//import entidade.Estado;
-
 public class Principal {
 	public static void main(String args[]) {
 		Scanner scan = new Scanner(System.in);
@@ -31,6 +24,9 @@ public class Principal {
 		}
 		if (op == 3) {
 			TelaCliente cliente = new TelaCliente();
+		}
+		if (op == 4) {
+			TelaProdutos produtos = new TelaProdutos();
 		}
 	}
 	
