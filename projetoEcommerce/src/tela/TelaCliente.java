@@ -31,26 +31,26 @@ public class TelaCliente {
 				cliente.setNome(scan.next());
 				System.out.println("Telefone: ");
 				cliente.setTelefone(scan.next());
+				System.out.println("CPF: ");
+				cliente.setCpf(scan.next());
+				System.out.println("RG: ");
+				cliente.setRg(scan.next());
+				System.out.println("EndereÃ§o: ");
+				cliente.setEndereco(scan.next());
 				
-				cliente.setNome(nome);
-				cliente.setSigla(sigla);
-				
-				dao.inserir(estado);
+				dao.inserir(cliente);
 			}if (op ==2) {
-				//exibir todos os cadastros
 				listarCadastros();
-				//perguntar para id para excluir
-				System.out.println("EXCLUIR CADASTRO");
-				System.out.println("Insira o id do Estado a ser excluido: ");
-				estado.setId( scan.nextLong() );
-				dao.excluir(estado);
+				System.out.println("EXCLUIR CADASTRO DE CLIENTE");
+				System.out.println("ID do Cliente: ");
+				cliente.setId( scan.nextLong() );
+				dao.excluir(cliente);
 				principal.main(null);
 			}
 			if (op ==3) {
 				listarCadastros();
-				//perguntar id para alterar
-				System.out.println("ALTERAR CADASTRO");
-				System.out.println("Insira o Id do cadastro a ser alterado");	
+				System.out.println("ALTERAR CADASTRO DE CLIENTE");
+				System.out.println("ID do Cliente: ");	
 				cliente.setId(scan.nextLong());
 				System.out.println("Nome do cliente: ");
 				cliente.setNome(scan.next());
@@ -60,7 +60,7 @@ public class TelaCliente {
 				cliente.setCpf(scan.next());
 				System.out.println("RG: ");
 				cliente.setRg(scan.next());
-				System.out.println("Endereço: ");
+				System.out.println("EndereÃ§o: ");
 				cliente.setEndereco(scan.next());
 				
 				System.out.println("Alterando...");
@@ -83,18 +83,15 @@ public class TelaCliente {
 		}while(r.contentEquals("s"));
 	}
 	
-	//Só para fazer a listar todos os cadastros em operações
 	public void listarCadastros() {
 		System.out.println("-----------------------------------------");
 		System.out.println("LISTAR TODOS ESTADOS");
-		List<Estado> est = dao.buscar(); //estudar melhor o percorrer da lista
+		List<Cliente> est = dao.buscar();
 
-		for (Estado estado : est) {
-			System.out.println("Id: "+estado.getId()+" Estado: "+estado.getNome()+" - "+estado.getSigla());
+		for (Cliente cliente : est) {
+			System.out.println("Id: "+cliente.getId()+" \nEstado: "+cliente.getNome()+" \nTelefone: "+cliente.getTelefone()+" \n CPF: "+cliente.getCpf()+" \nRG: "+cliente.getRg());
 		}
 		System.out.println("-----------------------------------------");
 		
 	}
-	}
-
 }

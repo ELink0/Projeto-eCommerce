@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Estado {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO) // Aqui, estou avisando que é auto-incremento
+	@GeneratedValue(strategy=GenerationType.AUTO) // Aqui, estou avisando que ï¿½ auto-incremento
 	private long id;
 	private String nome;
 	private String sigla;

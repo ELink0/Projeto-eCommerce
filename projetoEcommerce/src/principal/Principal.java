@@ -16,9 +16,10 @@ import tela.TelaCliente;
 public class Principal {
 	public static void main(String args[]) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("1 - Gerenciar Estado");
-		System.out.println("2 - Gerenciar Cidade");
-		System.out.println("3 - Gerenciar Cliente");
+		System.out.println("1 - Gerenciar Estados");
+		System.out.println("2 - Gerenciar Cidades");
+		System.out.println("3 - Gerenciar Clientes");
+		System.out.println("4 - Gerenciar Produtos");
 		int op = scan.nextInt();
 		scan.nextLine();
 		
