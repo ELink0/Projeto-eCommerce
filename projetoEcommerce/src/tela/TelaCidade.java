@@ -1,7 +1,3 @@
-	// persist salva
-	// merge altera
-	// remove apaga
-	// find busca
 package tela;
 
 import java.util.Iterator;
