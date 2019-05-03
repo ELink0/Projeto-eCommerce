@@ -1,7 +1,4 @@
-	// persist salva
-	// merge altera
-	// remove apaga
-	// find busca
+
 package tela;
 
 import java.util.Iterator;
@@ -82,11 +79,10 @@ public class TelaEstado {
 		}while(r.contentEquals("s"));
 	}
 	
-	//Só para fazer a listar todos os cadastros em operações
 	public void listarCadastros() {
 		System.out.println("-----------------------------------------");
 		System.out.println("LISTAR TODOS ESTADOS");
-		List<Estado> est = dao.buscar(); //estudar melhor o percorrer da lista
+		List<Estado> est = dao.buscar(); 
 
 		for (Estado estado : est) {
 			System.out.println("Id: "+estado.getId()+" Estado: "+estado.getNome()+" - "+estado.getSigla());
