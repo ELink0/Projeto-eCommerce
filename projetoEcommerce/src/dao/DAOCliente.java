@@ -50,7 +50,7 @@ public class DAOCliente {
 			transacao.rollback();
 		}finally {
 			gerenciador.close();
-		}return cliente;//retorna o estado salvo  
+		}return cliente;
 		
 	}
 	public Cliente alterar(Cliente cliente) {
