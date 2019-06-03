@@ -15,6 +15,7 @@ public class DAOCidade {
 	private EntityTransaction transacao;
 	
 	public Cidade inserir(Cidade cidade) {
+		//oooo
 		try {
 			EntityManagerFactory fabrica = Fabrica.get();
 			gerenciador = fabrica.createEntityManager();
